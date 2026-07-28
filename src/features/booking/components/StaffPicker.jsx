@@ -9,7 +9,13 @@ export const ANY_STAFF = 'any';
  * the number of bookable slots, so it should never be buried.
  */
 export function StaffPicker({ serviceId, selectedId, onSelect }) {
-  const { data: staff, isPending, isError, error, refetch } = useStaffForService(serviceId);
+  const {
+    data: staff,
+    isPending,
+    isError,
+    error,
+    refetch,
+  } = useStaffForService(serviceId);
 
   if (isPending) return <LoadingBlock label="Loading team" />;
   if (isError) return <ErrorState message={error.message} onRetry={refetch} />;

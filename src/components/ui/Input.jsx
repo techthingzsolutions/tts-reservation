@@ -12,12 +12,7 @@ export const Input = forwardRef(function Input(
     <input
       ref={ref}
       aria-invalid={invalid || undefined}
-      className={cn(
-        BASE,
-        'h-11',
-        invalid ? 'border-danger' : 'border-border',
-        className
-      )}
+      className={cn(BASE, 'h-11', invalid ? 'border-danger' : 'border-border', className)}
       {...props}
     />
   );
@@ -51,12 +46,7 @@ export const Select = forwardRef(function Select(
     <select
       ref={ref}
       aria-invalid={invalid || undefined}
-      className={cn(
-        BASE,
-        'h-11',
-        invalid ? 'border-danger' : 'border-border',
-        className
-      )}
+      className={cn(BASE, 'h-11', invalid ? 'border-danger' : 'border-border', className)}
       {...props}
     >
       {children}

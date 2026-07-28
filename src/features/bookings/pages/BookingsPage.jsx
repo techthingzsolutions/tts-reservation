@@ -10,10 +10,7 @@ import {
 } from '@/components/ui';
 import { formatDate, formatTimeRange } from '@/lib/datetime';
 import { formatAmount } from '@/lib/formatAmount';
-import {
-  BOOKING_STATUS_LABELS,
-  allowedTransitions,
-} from '@/constants/bookingStatus';
+import { BOOKING_STATUS_LABELS, allowedTransitions } from '@/constants/bookingStatus';
 import { useToast } from '@/app/providers/ToastProvider';
 import { useTenant } from '@/features/tenant/hooks/useTenant';
 import { useBookings, useUpdateBookingStatus } from '../hooks/useBookings';
@@ -102,7 +99,9 @@ export function BookingsPage() {
                     <Td>{booking.service?.name ?? '—'}</Td>
                     <Td>{booking.staff?.name ?? '—'}</Td>
                     <Td>
-                      <span className="block">{formatDate(booking.startsAt, timeZone)}</span>
+                      <span className="block">
+                        {formatDate(booking.startsAt, timeZone)}
+                      </span>
                       <span className="text-content-muted">
                         {formatTimeRange(booking.startsAt, booking.endsAt, timeZone)}
                       </span>

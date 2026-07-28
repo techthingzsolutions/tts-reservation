@@ -7,7 +7,8 @@ const VARIANTS = {
     'bg-primary text-primary-contrast hover:bg-primary-hover disabled:bg-primary/50',
   secondary:
     'bg-surface text-content border border-border hover:bg-surface-muted disabled:opacity-50',
-  ghost: 'text-content-muted hover:bg-surface-muted hover:text-content disabled:opacity-50',
+  ghost:
+    'text-content-muted hover:bg-surface-muted hover:text-content disabled:opacity-50',
   danger: 'bg-danger text-white hover:bg-danger/90 disabled:bg-danger/50',
 };
 

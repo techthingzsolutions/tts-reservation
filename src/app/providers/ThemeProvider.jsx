@@ -49,7 +49,12 @@ export function ThemeProvider({ theme: initialTheme, children }) {
   }, [tokens]);
 
   const value = useMemo(
-    () => ({ theme, tokens, setTheme, previewPalette: (paletteId) => setTheme((t) => ({ ...t, paletteId })) }),
+    () => ({
+      theme,
+      tokens,
+      setTheme,
+      previewPalette: (paletteId) => setTheme((t) => ({ ...t, paletteId })),
+    }),
     [theme, tokens]
   );
 

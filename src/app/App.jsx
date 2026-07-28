@@ -8,7 +8,6 @@ import { ToastProvider } from './providers/ToastProvider';
 import { AuthProvider } from './providers/AuthProvider';
 import { router } from './router';
 
-
 /**
  * Provider order matters:
  *   ErrorBoundary  - catches everything below it

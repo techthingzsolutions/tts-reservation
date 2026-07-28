@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import { addDays } from 'date-fns';
 import { cn } from '@/lib/cn';
-import { buildDateRange, dateKeyToUtc, formatInZone, toDateKey, todayKey } from '@/lib/datetime';
+import {
+  buildDateRange,
+  dateKeyToUtc,
+  formatInZone,
+  toDateKey,
+  todayKey,
+} from '@/lib/datetime';
 
 const VISIBLE_DAYS = 7;
 
@@ -24,10 +30,7 @@ export function DateStrip({ selectedDate, onSelect, timeZone, maxAdvanceDays = 6
 
   /** Move the window by `days`, clamped so it never starts before today. */
   const shift = (days) => {
-    const next = toDateKey(
-      addDays(dateKeyToUtc(windowStart, timeZone), days),
-      timeZone
-    );
+    const next = toDateKey(addDays(dateKeyToUtc(windowStart, timeZone), days), timeZone);
     setWindowStart(next < today ? today : next);
   };
 

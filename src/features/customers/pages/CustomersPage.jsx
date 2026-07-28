@@ -42,7 +42,9 @@ export function CustomersPage() {
                   </td>
                   <td className="px-4 py-3">{customer.visitCount}</td>
                   <td className="px-4 py-3">{customer.noShowCount}</td>
-                  <td className="px-4 py-3 text-content-muted">{customer.notes || '—'}</td>
+                  <td className="px-4 py-3 text-content-muted">
+                    {customer.notes || '—'}
+                  </td>
                 </tr>
               ))}
             </tbody>

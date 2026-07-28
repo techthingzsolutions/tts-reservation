@@ -32,7 +32,13 @@ export function ManageBookingPage() {
   const queryClient = useQueryClient();
   const [confirmOpen, setConfirmOpen] = useState(false);
 
-  const { data: booking, isPending, isError, error, refetch } = useQuery({
+  const {
+    data: booking,
+    isPending,
+    isError,
+    error,
+    refetch,
+  } = useQuery({
     queryKey: queryKeys.bookings.byToken(token),
     queryFn: () => bookingApi.getByToken(token),
   });
@@ -48,7 +54,8 @@ export function ManageBookingPage() {
     onError: (mutationError) => toast.error(mutationError.message),
   });
 
-  if (isPending) return <LoadingBlock label="Loading your booking" className="min-h-[60vh]" />;
+  if (isPending)
+    return <LoadingBlock label="Loading your booking" className="min-h-[60vh]" />;
   if (isError) return <ErrorState message={error.message} onRetry={refetch} />;
 
   const canCancel = canTransition(booking.status, BOOKING_STATUS.CANCELLED);
@@ -102,7 +109,11 @@ export function ManageBookingPage() {
             <Button variant="ghost" onClick={() => setConfirmOpen(false)}>
               Keep it
             </Button>
-            <Button variant="danger" loading={cancel.isPending} onClick={() => cancel.mutate()}>
+            <Button
+              variant="danger"
+              loading={cancel.isPending}
+              onClick={() => cancel.mutate()}
+            >
               Yes, cancel
             </Button>
           </>

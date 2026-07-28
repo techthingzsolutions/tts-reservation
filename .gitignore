@@ -4,6 +4,10 @@ dist-ssr
 build
 coverage
 
+# Vite writes these while resolving the config on Windows
+vite.config.js.timestamp-*.mjs
+vite.config.*.timestamp-*
+
 .env
 .env.local
 .env.*.local

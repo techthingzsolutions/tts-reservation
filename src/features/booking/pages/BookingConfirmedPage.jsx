@@ -1,6 +1,13 @@
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { Button, Card, CardBody, ErrorState, LoadingBlock, StatusBadge } from '@/components/ui';
+import {
+  Button,
+  Card,
+  CardBody,
+  ErrorState,
+  LoadingBlock,
+  StatusBadge,
+} from '@/components/ui';
 import { formatDate, formatTimeRange } from '@/lib/datetime';
 import { formatAmount } from '@/lib/formatAmount';
 import { manageBookingPath, ROUTES } from '@/constants/routes';
@@ -12,12 +19,19 @@ export function BookingConfirmedPage() {
   const { token } = useParams();
   const { timeZone } = useTenant();
 
-  const { data: booking, isPending, isError, error, refetch } = useQuery({
+  const {
+    data: booking,
+    isPending,
+    isError,
+    error,
+    refetch,
+  } = useQuery({
     queryKey: queryKeys.bookings.byToken(token),
     queryFn: () => bookingApi.getByToken(token),
   });
 
-  if (isPending) return <LoadingBlock label="Loading your booking" className="min-h-[60vh]" />;
+  if (isPending)
+    return <LoadingBlock label="Loading your booking" className="min-h-[60vh]" />;
   if (isError) return <ErrorState message={error.message} onRetry={refetch} />;
 
   return (

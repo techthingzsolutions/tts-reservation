@@ -32,10 +32,7 @@ export const BOOKING_TRANSITIONS = {
  * Statuses that occupy a slot. Anything in this list must be subtracted from
  * availability; anything outside it frees the time up again.
  */
-export const ACTIVE_BOOKING_STATUSES = [
-  BOOKING_STATUS.PENDING,
-  BOOKING_STATUS.CONFIRMED,
-];
+export const ACTIVE_BOOKING_STATUSES = [BOOKING_STATUS.PENDING, BOOKING_STATUS.CONFIRMED];
 
 export const BOOKING_STATUS_LABELS = {
   [BOOKING_STATUS.PENDING]: 'Pending',

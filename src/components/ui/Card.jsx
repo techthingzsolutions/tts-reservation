@@ -3,10 +3,7 @@ import { cn } from '@/lib/cn';
 export function Card({ className, children, ...props }) {
   return (
     <div
-      className={cn(
-        'rounded-token border border-border bg-surface shadow-sm',
-        className
-      )}
+      className={cn('rounded-token border border-border bg-surface shadow-sm', className)}
       {...props}
     >
       {children}

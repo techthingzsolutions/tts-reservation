@@ -47,7 +47,10 @@ export function LoginPage() {
       <CardBody>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
           {formError && (
-            <p role="alert" className="rounded-token bg-danger/10 px-3 py-2 text-sm text-danger">
+            <p
+              role="alert"
+              className="rounded-token bg-danger/10 px-3 py-2 text-sm text-danger"
+            >
               {formError}
             </p>
           )}

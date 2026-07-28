@@ -1,11 +1,7 @@
 import { Card, CardBody, CardHeader, PageHeader } from '@/components/ui';
 import { PhasePlaceholder } from '@/components/PhasePlaceholder';
 import { cn } from '@/lib/cn';
-import {
-  FONT_PAIRINGS,
-  RADIUS_OPTIONS,
-  THEME_PALETTES,
-} from '@/constants/themePalettes';
+import { FONT_PAIRINGS, RADIUS_OPTIONS, THEME_PALETTES } from '@/constants/themePalettes';
 import { useTheme } from '@/app/providers/ThemeProvider';
 
 /**

@@ -1,11 +1,6 @@
 import { http, HttpResponse, delay } from 'msw';
 import { BOOKING_STATUS, canTransition } from '@/constants/bookingStatus';
-import {
-  createBooking,
-  db,
-  expandBooking,
-  listSlots,
-} from './db';
+import { createBooking, db, expandBooking, listSlots } from './db';
 
 /**
  * Mock API. Mirrors the endpoint contract the Laravel API must implement.
@@ -156,10 +151,7 @@ export const handlers = [
       return HttpResponse.json({ message: 'Service not found.' }, { status: 404 });
     }
 
-    return HttpResponse.json(
-      { data: expandBooking(result.booking) },
-      { status: 201 }
-    );
+    return HttpResponse.json({ data: expandBooking(result.booking) }, { status: 201 });
   }),
 
   /** Public lookup by secure token - guest reschedule and cancel. */

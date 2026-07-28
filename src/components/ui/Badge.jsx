@@ -1,8 +1,5 @@
 import { cn } from '@/lib/cn';
-import {
-  BOOKING_STATUS_LABELS,
-  BOOKING_STATUS_TONES,
-} from '@/constants/bookingStatus';
+import { BOOKING_STATUS_LABELS, BOOKING_STATUS_TONES } from '@/constants/bookingStatus';
 
 const TONES = {
   neutral: 'bg-surface-muted text-content-muted border-border',

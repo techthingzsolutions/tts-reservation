@@ -30,12 +30,54 @@ function seedBookings() {
   const dayAfter = toDateKey(addDays(new Date(), 2), tz);
 
   const rows = [
-    { staffId: 1, serviceId: 1, customerId: 1, date: today, time: '10:00', status: BOOKING_STATUS.CONFIRMED },
-    { staffId: 1, serviceId: 2, customerId: 3, date: today, time: '13:00', status: BOOKING_STATUS.CONFIRMED },
-    { staffId: 2, serviceId: 3, customerId: 2, date: today, time: '11:30', status: BOOKING_STATUS.PENDING },
-    { staffId: 4, serviceId: 4, customerId: 1, date: tomorrow, time: '09:30', status: BOOKING_STATUS.CONFIRMED },
-    { staffId: 3, serviceId: 5, customerId: 3, date: tomorrow, time: '14:00', status: BOOKING_STATUS.CONFIRMED },
-    { staffId: 2, serviceId: 1, customerId: 2, date: dayAfter, time: '10:15', status: BOOKING_STATUS.PENDING },
+    {
+      staffId: 1,
+      serviceId: 1,
+      customerId: 1,
+      date: today,
+      time: '10:00',
+      status: BOOKING_STATUS.CONFIRMED,
+    },
+    {
+      staffId: 1,
+      serviceId: 2,
+      customerId: 3,
+      date: today,
+      time: '13:00',
+      status: BOOKING_STATUS.CONFIRMED,
+    },
+    {
+      staffId: 2,
+      serviceId: 3,
+      customerId: 2,
+      date: today,
+      time: '11:30',
+      status: BOOKING_STATUS.PENDING,
+    },
+    {
+      staffId: 4,
+      serviceId: 4,
+      customerId: 1,
+      date: tomorrow,
+      time: '09:30',
+      status: BOOKING_STATUS.CONFIRMED,
+    },
+    {
+      staffId: 3,
+      serviceId: 5,
+      customerId: 3,
+      date: tomorrow,
+      time: '14:00',
+      status: BOOKING_STATUS.CONFIRMED,
+    },
+    {
+      staffId: 2,
+      serviceId: 1,
+      customerId: 2,
+      date: dayAfter,
+      time: '10:15',
+      status: BOOKING_STATUS.PENDING,
+    },
   ];
 
   return rows.map((row, index) => {
@@ -62,7 +104,15 @@ function seedBookings() {
 function seedTimeOff() {
   // Mika is off tomorrow afternoon so the demo shows a real availability gap.
   const tomorrow = toDateKey(addDays(new Date(), 1), tz);
-  return [{ staffId: 1, date: tomorrow, startTime: '13:00', endTime: '18:00', reason: 'Medical' }];
+  return [
+    {
+      staffId: 1,
+      date: tomorrow,
+      startTime: '13:00',
+      endTime: '18:00',
+      reason: 'Medical',
+    },
+  ];
 }
 
 export const db = {

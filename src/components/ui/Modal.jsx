@@ -2,7 +2,15 @@ import { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { cn } from '@/lib/cn';
 
-export function Modal({ open, onClose, title, description, children, footer, size = 'md' }) {
+export function Modal({
+  open,
+  onClose,
+  title,
+  description,
+  children,
+  footer,
+  size = 'md',
+}) {
   const panelRef = useRef(null);
 
   useEffect(() => {
