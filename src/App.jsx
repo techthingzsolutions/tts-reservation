@@ -2,11 +2,11 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { RouterProvider } from 'react-router-dom';
 import { queryClient } from '@/lib/queryClient';
 import { useTenant } from '@/features/tenant/hooks/useTenant';
-import { ErrorBoundary } from './ErrorBoundary';
-import { ThemeProvider } from './providers/ThemeProvider';
-import { ToastProvider } from './providers/ToastProvider';
-import { AuthProvider } from './providers/AuthProvider';
-import { router } from './router';
+import { ErrorBoundary } from './app/ErrorBoundary';
+import { ThemeProvider } from './app/providers/ThemeProvider';
+import { ToastProvider } from './app/providers/ToastProvider';
+import { AuthProvider } from './app/providers/AuthProvider';
+import { router } from './app/router';
 
 /**
  * Provider order matters:
