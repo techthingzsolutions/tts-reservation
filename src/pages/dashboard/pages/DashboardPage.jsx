@@ -4,8 +4,8 @@ import { formatAmount } from '@/lib/formatAmount';
 import { formatTimeRange, toDateKey, todayKey } from '@/lib/datetime';
 import { BOOKING_STATUS } from '@/constants/bookingStatus';
 import { useAuth } from '@/app/providers/AuthProvider';
-import { useTenant } from '@/features/tenant/hooks/useTenant';
-import { useBookings } from '@/features/bookings/hooks/useBookings';
+import { useTenant } from '@/pages/tenant/hooks/useTenant';
+import { useBookings } from '@/pages/bookings/hooks/useBookings';
 
 export function DashboardPage() {
   const { user } = useAuth();

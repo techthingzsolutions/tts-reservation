@@ -7,7 +7,7 @@ import {
   useState,
 } from 'react';
 import { getToken, setToken, setUnauthorizedHandler } from '@/lib/apiClient';
-import { authApi } from '@/features/auth/api/authApi';
+import { authApi } from '@/pages/auth/api/authApi';
 import { hasCapability, isAdminRole } from '@/constants/roles';
 import { queryClient } from '@/lib/queryClient';
 

@@ -1,7 +1,7 @@
 import { QueryClientProvider } from '@tanstack/react-query';
 import { RouterProvider } from 'react-router-dom';
 import { queryClient } from '@/lib/queryClient';
-import { useTenant } from '@/features/tenant/hooks/useTenant';
+import { useTenant } from '@/pages/tenant/hooks/useTenant';
 import { ErrorBoundary } from './app/ErrorBoundary';
 import { ThemeProvider } from './app/providers/ThemeProvider';
 import { ToastProvider } from './app/providers/ToastProvider';

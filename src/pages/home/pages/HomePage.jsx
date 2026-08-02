@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { Card, CardBody, LoadingBlock } from '@/components/ui';
 import { formatAmount, formatDuration } from '@/lib/formatAmount';
 import { ROUTES } from '@/constants/routes';
-import { useServices } from '@/features/services/hooks/useServices';
-import { useTenant } from '@/features/tenant/hooks/useTenant';
+import { useServices } from '@/pages/services/hooks/useServices';
+import { useTenant } from '@/pages/tenant/hooks/useTenant';
 
 /**
  * Minimal public landing page.

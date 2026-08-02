@@ -6,20 +6,20 @@ import { AdminLayout } from '@/layouts/AdminLayout';
 import { AuthLayout } from '@/layouts/AuthLayout';
 import { ProtectedRoute } from './ProtectedRoute';
 
-import { HomePage } from '@/features/home/pages/HomePage';
-import { BookingPage } from '@/features/booking/pages/BookingPage';
-import { BookingConfirmedPage } from '@/features/booking/pages/BookingConfirmedPage';
-import { ManageBookingPage } from '@/features/booking/pages/ManageBookingPage';
-import { LoginPage } from '@/features/auth/pages/LoginPage';
-import { DashboardPage } from '@/features/dashboard/pages/DashboardPage';
-import { CalendarPage } from '@/features/bookings/pages/CalendarPage';
-import { BookingsPage } from '@/features/bookings/pages/BookingsPage';
-import { ServicesPage } from '@/features/services/pages/ServicesPage';
-import { StaffPage } from '@/features/staff/pages/StaffPage';
-import { CustomersPage } from '@/features/customers/pages/CustomersPage';
-import { ReportsPage } from '@/features/reports/pages/ReportsPage';
-import { SettingsPage } from '@/features/settings/pages/SettingsPage';
-import { NotFoundPage } from '@/features/shared/pages/NotFoundPage';
+import { HomePage } from '@/pages/home/pages/HomePage';
+import { BookingPage } from '@/pages/booking/pages/BookingPage';
+import { BookingConfirmedPage } from '@/pages/booking/pages/BookingConfirmedPage';
+import { ManageBookingPage } from '@/pages/booking/pages/ManageBookingPage';
+import { LoginPage } from '@/pages/auth/pages/LoginPage';
+import { DashboardPage } from '@/pages/dashboard/pages/DashboardPage';
+import { CalendarPage } from '@/pages/bookings/pages/CalendarPage';
+import { BookingsPage } from '@/pages/bookings/pages/BookingsPage';
+import { ServicesPage } from '@/pages/services/pages/ServicesPage';
+import { StaffPage } from '@/pages/staff/pages/StaffPage';
+import { CustomersPage } from '@/pages/customers/pages/CustomersPage';
+import { ReportsPage } from '@/pages/reports/pages/ReportsPage';
+import { SettingsPage } from '@/pages/settings/pages/SettingsPage';
+import { NotFoundPage } from '@/pages/shared/pages/NotFoundPage';
 
 /**
  * Two trees:
